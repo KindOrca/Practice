@@ -29,4 +29,5 @@ public class BlogApiController {
     public ResponseEntity<List<ArticleResponse>> findAllArticles() {
         List<ArticleResponse> articles = blogService.findAll().stream().map(ArticleResponse::new).toList();
         return ResponseEntity.ok().body(articles);
+    }
 }
